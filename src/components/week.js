@@ -1,14 +1,30 @@
 import React from 'react'
+// import TextField from '@material-ui/core/TextField'
+
+
+import Day from './Day'
 
 class Week extends React.Component {
+  formatDayCards = () => {
+    return this.props.dailyData.map((reading, index) => (
+      <Day reading={reading} key={index} />
+    ))
+  }
 
-render () {
-    return(
-        <h1> Hello </h1>
+  render () {
+    return (
+      <div className='container'>
+        <div>
+          <h1 className='display-1 jumbotron'> 5 day Forecast</h1>
+          <h2 className='display-5 bg-info'>City: {this.props.city}</h2>
+        </div>
+          
+        <div className='row justify-content-center'>
+          {this.formatDayCards()}
+        </div>
+      </div>
     )
-}
-  
-    
+  }
 }
 
-export default Week;
+export default Week
