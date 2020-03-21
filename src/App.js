@@ -2,8 +2,8 @@ import React from 'react'
 import './App.css'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
+import { Redirect } from 'react-router-dom' 
 
-// import Form from './components/Form'
 import Week from './components/Week'
 import Header from './components/Header'
 
@@ -14,11 +14,20 @@ class App extends React.Component {
     dailyData: []
   }
 
-  clickToFetch (e) {
+handleErrors(response) {
+  if (!response.ok) {
+    throw Error(alert("Looks like thats not a city! Try again")) 
+  //  (alert('Looks like thats not a city!'))
+  }
+  return response;
+}
+
+  clickToFetch () {
     fetch(
       `http://api.openweathermap.org/data/2.5/forecast/?q=${this.state.city},us&units=metric&APPID=e99ca77694fc417787cf2fa55f6155de`
     )
-      .then(res => res.json())
+    .then(this.handleErrors)
+      .then(res => res.json())  
       .then(data => {
         const dailyData = data.list.filter(reading =>
           reading.dt_txt.includes('18:00:00')
@@ -65,6 +74,7 @@ class App extends React.Component {
             Get Weather
           </Button>
         </div>
+       
       </div>
     )
   }
