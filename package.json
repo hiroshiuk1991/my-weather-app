@@ -12,6 +12,7 @@
     "moment-timezone": "^0.5.28",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-icons-weather": "^1.0.5",
     "react-moment": "^0.9.7",
     "react-scripts": "3.4.0"
   },
