@@ -1,6 +1,4 @@
 import React from 'react'
-// import TextField from '@material-ui/core/TextField'
-
 
 import Day from './Day'
 
@@ -16,7 +14,7 @@ class Week extends React.Component {
       <div className='container'>
         <div>
           <h1 className='display-1 jumbotron'> 5 day Forecast</h1>
-          <h2 className='display-5 bg-info'>City: {this.props.city}</h2>
+          <h2 className='p-3 mb-2 bg-primary text-white'>City: {this.props.city}</h2>
         </div>
           
         <div className='row justify-content-center'>

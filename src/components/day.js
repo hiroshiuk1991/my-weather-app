@@ -14,9 +14,9 @@ export default function Day (props) {
               <h3 className="card-title">{moment(newDate).format('dddd')}</h3>
               <p className="text-muted">{moment(newDate).format('MMMM Do, h:mm a')}</p>
               <i className={imgURL}></i>
-              <h2>{Math.round(props.reading.main.temp)} °F</h2>
-              <h4>Min:{Math.round(props.reading.main.temp_min)} °F</h4>
-              <h4>Max:{Math.round(props.reading.main.temp_max)} °F</h4>
+              <h2>{Math.round(props.reading.main.temp)} °C</h2>
+              <h4>Min:{Math.round(props.reading.main.temp_min)} °C</h4>
+              <h4>Max:{Math.round(props.reading.main.temp_max)} °C</h4>
               <div className="card-body">
                   <p className="card-text">{props.reading.weather[0].description}</p>
               </div>
