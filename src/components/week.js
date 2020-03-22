@@ -13,7 +13,7 @@ class Week extends React.Component {
     return (
       <div className='container'>
         <div>
-          <h1 className='display-1 jumbotron'> 5 day Forecast</h1>
+          <h1 className='display-2 jumbotron'> 5 day Forecast</h1>
           <h2 className='p-3 mb-2 bg-primary text-white'>City: {this.props.city}</h2>
         </div>
           

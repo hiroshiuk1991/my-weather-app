@@ -2,7 +2,6 @@ import React from 'react'
 import './App.css'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
-import { Redirect } from 'react-router-dom' 
 
 import Week from './components/Week'
 import Header from './components/Header'
@@ -52,6 +51,7 @@ handleErrors(response) {
           city={this.state.city}
           handleNewCity={this.handleNewCity}
         />
+        <br/>
         <div>
           <TextField
             onChange={this.handleNewCity}
@@ -63,6 +63,7 @@ handleErrors(response) {
             <input type='text' name='city' placeholder='City...' />
           </TextField>
         </div>
+        <br/>
         <div>
           <Button
             className='button'
@@ -74,7 +75,7 @@ handleErrors(response) {
             Get Weather
           </Button>
         </div>
-       
+       <div><br/></div>
       </div>
     )
   }
